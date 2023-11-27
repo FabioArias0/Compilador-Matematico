@@ -105,19 +105,19 @@ class SimpleIDE:
         self.result_text = tk.Text(self.result_frame, wrap=tk.WORD, width=40, height=1)
         self.result_text.pack(side=tk.TOP)
 
-        # Cuadro de texto para mostrar los tokens en la parte superior del cuadro de resultado
+        # Cuadro de texto para mostrar los tokens
         self.tokens_text = scrolledtext.ScrolledText(self.result_frame, wrap=tk.WORD, width=40, height=10)
         self.tokens_text.pack(side=tk.BOTTOM)
 
-        # Cuadro de texto para mostrar el código intermedio en la parte media del cuadro de resultado
+        # Cuadro de texto para mostrar el código intermedio
         self.intermediate_code_text = scrolledtext.ScrolledText(self.result_frame, wrap=tk.WORD, width=40, height=10)
         self.intermediate_code_text.pack(side=tk.BOTTOM)
 
-        # Cuadro de texto para mostrar la tabla de símbolos en la parte inferior del cuadro de resultado
+        # Cuadro de texto para mostrar la tabla de símbolos
         self.symbols_text = scrolledtext.ScrolledText(self.result_frame, wrap=tk.WORD, width=40, height=10)
         self.symbols_text.pack(side=tk.BOTTOM)
 
-        # Cuadro de texto para mostrar el código traducido a C++ en la parte inferior del cuadro de resultado
+        # Cuadro de texto para mostrar el código traducido a C++ 
         self.cpp_code_text = scrolledtext.ScrolledText(self.result_frame, wrap=tk.WORD, width=40, height=10)
         self.cpp_code_text.pack(side=tk.BOTTOM)
 
@@ -244,7 +244,7 @@ def get_token_type(token):
     elif token in ['LPAREN', 'RPAREN']:
         return "Simbolo Especial"
     else:
-        return "Identificador"  # Se asume que cualquier otro token es un identificador
+        return "Identificador"  # Aqui el codigo asumira que cualquier otro token es un identificador
 
 if __name__ == "__main__":
     root = tk.Tk()
